@@ -1,0 +1,43 @@
+[build-system]
+requires = ["flit_core >=3.2,<4"]
+build-backend = "flit_core.buildapi"
+
+[project]
+name = "shift-dev"
+version = "1.0.0"
+description = "SHIFT Dataset Devkit"
+readme = "README.md"
+requires-python = ">=3.9"
+license = {file = "LICENSE"}
+authors = [
+    {name = "Tao Sun", email = "taosun47@ethz.ch"},
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: BSD License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "appdirs>=1.4.4",
+    "h5py>=3.1.0",
+    "matplotlib>=3.6.3", 
+    "numpy>=1.21.3",
+    "pillow>=9.1.1",
+    "pycocotools",
+    "scalabel @ git+https://github.com/scalabel/scalabel.git",
+    "scikit_image>=0.18.3",
+    "PyYAML>=6.0",
+    "tqdm>=4.38.0",
+    "opencv_python>=4.5.2.54",
+    "pydantic<=1.10.22",  # pydantic v2 is incompatible due to many changes.
+    "torch"
+]
+
+[project.urls]
+Homepage = "https://www.vis.xyz/shift/"
+Documentation = "https://www.vis.xyz/shift/"
+Source = "https://github.com/SysCV/shift-dev"
+Tracker = "https://github.com/SysCV/shift-dev/issues"
+
+[tool.flit.module]
+name = "shift_dev"
